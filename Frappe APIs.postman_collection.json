@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "129dce8f-f9dd-445c-8dda-9098169f10ad",
+		"name": "Frappe APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20647520"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "custom login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "administrator",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/emp_app.login_api.login_api.login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"emp_app.login_api.login_api.login"
+							]
+						},
+						"description": "Stander login "
+					},
+					"response": []
+				},
+				{
+					"name": "Stander login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usr",
+									"value": "administrator",
+									"type": "text"
+								},
+								{
+									"key": "pwd",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Compnay",
+			"item": [
+				{
+					"name": "Get Company Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "Brain Wise",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{root}}emp_app.company.doctype.company.api.company_api.get_company_details",
+							"host": [
+								"{{root}}emp_app",
+								"company",
+								"doctype",
+								"company",
+								"api",
+								"company_api",
+								"get_company_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{root}}emp_app.company.doctype.company.api.company_api.get_companies",
+							"host": [
+								"{{root}}emp_app",
+								"company",
+								"doctype",
+								"company",
+								"api",
+								"company_api",
+								"get_companies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "Get List of Departments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root}}emp_app.department.doctype.department.api.api.get_departments",
+							"host": [
+								"{{root}}emp_app",
+								"department",
+								"doctype",
+								"department",
+								"api",
+								"api",
+								"get_departments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Departments By id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "DEP-1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{root}}emp_app.department.doctype.department.api.api.get_department_details",
+							"host": [
+								"{{root}}emp_app",
+								"department",
+								"doctype",
+								"department",
+								"api",
+								"api",
+								"get_department_details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Get List of Employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root}}{{emp_doctype}}get_list_of_employee",
+							"host": [
+								"{{root}}{{emp_doctype}}get_list_of_employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee Details by ID  of Get Employee List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "EMP-9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{root}}{{emp_doctype}}get_employee_details",
+							"host": [
+								"{{root}}{{emp_doctype}}get_employee_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create  Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "company",
+									"value": "Brain Wise",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "DEP-1",
+									"type": "text"
+								},
+								{
+									"key": "employee_name",
+									"value": "User by APi",
+									"type": "text"
+								},
+								{
+									"key": "email_address",
+									"value": "e@e.com",
+									"type": "text"
+								},
+								{
+									"key": "designation",
+									"value": "soft",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "jlkl",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "85",
+									"type": "text"
+								},
+								{
+									"key": "kjhkkjkj",
+									"value": "kjhkhj",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{root}}{{emp_doctype}}create_employee",
+							"host": [
+								"{{root}}{{emp_doctype}}create_employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Information",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employee_id",
+									"value": "EMP-11",
+									"type": "text"
+								},
+								{
+									"key": "employee_name",
+									"value": "updated user ",
+									"type": "text"
+								},
+								{
+									"key": "dsd",
+									"value": "d",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{root}}{{emp_doctype}}update_employee_information",
+							"host": [
+								"{{root}}{{emp_doctype}}update_employee_information"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employee_id",
+									"value": "EMP-9",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "Approve",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{root}}{{emp_doctype}}update_employee_status",
+							"host": [
+								"{{root}}{{emp_doctype}}update_employee_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Status from Application Received",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "emp_id",
+									"value": "EMP-18",
+									"type": "text"
+								},
+								{
+									"key": "response",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{root}}{{emp_doctype}}update_employee_status_from_application_received",
+							"host": [
+								"{{root}}{{emp_doctype}}update_employee_status_from_application_received"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pk",
+									"value": "EMP-20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{root}}{{emp_doctype}}delete_employee",
+							"host": [
+								"{{root}}{{emp_doctype}}delete_employee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
