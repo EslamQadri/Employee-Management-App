@@ -1,7 +1,7 @@
 # Employee Management App
 
 ## Description
-develop an Employee Management App that encompasses various features for managing companies, departments, and employees. 
+develop an Frappe Employee Management App that encompasses various features for managing companies, departments, and employees. 
 The system will allow users to create, read, update, and delete (CRUD) records for each of these entities
 
 ## Features
