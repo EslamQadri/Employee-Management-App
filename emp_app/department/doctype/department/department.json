@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2024-08-05 12:12:30.146988",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "naming_series",
+  "section_break_azcu",
+  "department_name",
+  "column_break_ptvy",
+  "number_of_employee"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department Name",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "number_of_employee",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Number of Employee",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "DEP-.#",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_azcu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ptvy",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Employee DocType",
+   "link_fieldname": "department"
+  }
+ ],
+ "modified": "2024-08-11 12:18:05.417283",
+ "modified_by": "Administrator",
+ "module": "Department",
+ "name": "Department",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "department_name",
+ "track_changes": 1,
+ "translated_doctype": 1
+}

@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2024-08-05 12:20:47.396868",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_status",
+  "naming_series",
+  "section_break_rimu",
+  "company",
+  "column_break_wfbc",
+  "department",
+  "section_break_hnsb",
+  "employee_name",
+  "mobile_number",
+  "address",
+  "column_break_hcqy",
+  "designation",
+  "email_address",
+  "section_break_ysfn",
+  "hired_on",
+  "days_employed",
+  "column_break_voba",
+  "left_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "link_filters": "[[\"Department\",\"company\",\"=\",\"eval: doc.company\"]]",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "default": "Application Received",
+   "fieldname": "employee_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Status",
+   "options": "Application Received\nInterview Scheduled\nHired\nNot Accepted\nLeft",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mobile Number",
+   "length": 11,
+   "unique": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address"
+  },
+  {
+   "description": "Position or Title",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "hired_on",
+   "fieldtype": "Date",
+   "label": "Hired on",
+   "read_only": 1
+  },
+  {
+   "fieldname": "left_on",
+   "fieldtype": "Date",
+   "label": "Left On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "EMP-.#",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "days_employed",
+   "fieldtype": "Int",
+   "is_virtual": 1,
+   "label": "Days Employed",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rimu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wfbc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hnsb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ysfn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hcqy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_voba",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-19 14:55:45.389352",
+ "modified_by": "Administrator",
+ "module": "Employee",
+ "name": "Employee DocType",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee_name",
+ "track_changes": 1,
+ "translated_doctype": 1
+}
