@@ -8,12 +8,14 @@ The system will allow users to create, read, update, and delete (CRUD) records f
 
 - Create, Read, Update, and Delete (CRUD) operations for companies and employees.
 - RESTful API endpoints.
+-  API Workflow for approve and reject Job Applicant and anthor actions 
 
 
 ## Prerequisites
 
-- Python 3.10
+- Python 3.12
 - ERPNEXT 15
+- Frappe 15 
 
   ## Installation
 
